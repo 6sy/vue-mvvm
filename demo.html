@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script src='./MVVM.js'></script>
+<script src='./Observer.js'></script>
+
+<body>
+  <div id='app'>
+    <h2 v-on:click=''>{{name}}--{{person.age}}</h2>
+    <div v-text='msg.name' @click='aaa'></div>
+    <div v-html='asd'></div>
+  </div>
+</body>
+<script>
+  let app = new MVVM({
+    el: '#app',
+    data: {
+      msg: {
+        name: 'a'
+      },
+      asd: '<p>1</p>',
+      name: '叶诗雨',
+      person: {
+        age: '18'
+      }
+    },
+    methods: {
+      aaa() {
+        alert(1)
+      }
+    }
+  })
+
+</script>
+
+</html>
